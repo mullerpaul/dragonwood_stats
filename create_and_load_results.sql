@@ -1,11 +1,13 @@
 CREATE TABLE result_counts
- (die_count  NUMBER NOT NULL,
-  result     NUMBER NOT NULL,
-  occurances NUMBER NOT NULL)
+ (die_count                  NUMBER NOT NULL,
+  result                     NUMBER NOT NULL,
+  occurances                 NUMBER NOT NULL,
+  this_result_prob           NUMBER,
+  this_result_or_better_prob NUMBER)
 /
 
 -- for one die
-INSERT INTO result_counts
+INSERT INTO result_counts (die_count, result, occurances)
 SELECT 1 AS die_count, result, 
        COUNT(*) AS occurances
   FROM (SELECT d1.value AS result
@@ -14,7 +16,7 @@ SELECT 1 AS die_count, result,
 /
 
 -- for two die
-INSERT INTO result_counts
+INSERT INTO result_counts (die_count, result, occurances)
 SELECT 2 AS die_count, result, 
        COUNT(*) AS occurances
   FROM (SELECT d1.value + d2.value AS result
@@ -24,7 +26,7 @@ SELECT 2 AS die_count, result,
 /
 
 -- for three die
-INSERT INTO result_counts
+INSERT INTO result_counts (die_count, result, occurances)
 SELECT 3 AS die_count, result, 
        COUNT(*) AS occurances
   FROM (SELECT d1.value + d2.value + d3.value AS result
@@ -35,7 +37,7 @@ SELECT 3 AS die_count, result,
 /
 
 -- for four die
-INSERT INTO result_counts
+INSERT INTO result_counts (die_count, result, occurances)
 SELECT 4 AS die_count, result, 
        COUNT(*) AS occurances
   FROM (SELECT d1.value + d2.value + d3.value + d4.value AS result
@@ -47,7 +49,7 @@ SELECT 4 AS die_count, result,
 /
 
 -- for five die
-INSERT INTO result_counts
+INSERT INTO result_counts (die_count, result, occurances)
 SELECT 5 AS die_count, result, 
        COUNT(*) AS occurances
   FROM (SELECT d1.value + d2.value + d3.value + d4.value + d5.value AS result
@@ -60,7 +62,7 @@ SELECT 5 AS die_count, result,
 /
 
 -- for six die
-INSERT INTO result_counts
+INSERT INTO result_counts (die_count, result, occurances)
 SELECT 6 AS die_count, result, 
        COUNT(*) AS occurances
   FROM (SELECT d1.value + d2.value + d3.value + d4.value + d5.value + d6.value AS result
