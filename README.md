@@ -12,7 +12,7 @@ After the game, I thought I should be able to figure out these odds with a penci
 If you want to roll a certain target number; but don't know how many dice you'll need to have a reasonable chance of success, use this table.  In the example above, we wanted to roll an 8 to capture a particular monster. Scroll down this chart untill you see 8 in the desired result column. There you can see that while its _possible_ with only 2 dice, the chances are pretty slim at just over 2%. If you can use 3 dice, your chances are an even 50%; but if you can manage a fourth dice, your chances go up to a pretty good 90%.  If you don't see a row for your combination of result and number of dice; that means there is **no** chance! You can't roll a 9 with only two dice for example.
 
 Desired result|Number of dice|Your percent chance of rolling that or better with this number of dice
-----------|----------|---------------------------
+:---------:|:---------:|--------
          1|         1|                        100
          2|         1|                     83.333
          2|         2|                        100
@@ -87,7 +87,7 @@ Desired result|Number of dice|Your percent chance of rolling that or better with
 If you know how many dice you'll be rolling and want to know your chances of rolling a given number, use this chart. For example, this turn you can only manage three dice so you scroll down until you see 3 in the number of dice column then look in the target result and percent chance columns to know that you have an 88% chance of rolling a 6 or better; but only a 27% chance of a 9 or better.  You'll still have to decide if captuing that 1 point monster this turn is worth losing your card(s) and having fewer next turn!
 
  Number of dice|Target result|Percent chance of rolling that target or better
-----------|----------|---------------------------
+:----------:|:----------:|-----
          1|         1|                        100
          1|         2|                     83.333
          1|         3|                         50
